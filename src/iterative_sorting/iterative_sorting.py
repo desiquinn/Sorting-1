@@ -28,6 +28,24 @@ def selection_sort( arr ):
     
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
+    # count how many swaps are happening
+    swap = True
+    #Loop through the array while count is greater than 0
+    while swap == True:
+        swap_count = 0
+        for i in range(len(arr)-1):
+            # if el is greater that the next el:
+            if arr[i] > arr[i+1]:
+                # store the element in temp varriable
+                cur_value = arr[i]
+                # assign current index to value of next el
+                arr[i] = arr[i+1]
+                # assign next index to value of stored element
+                arr[i+1] = cur_value
+                # add 1 to counter
+                swap_count += 1
+        if swap_count == 0:
+            swap = False
 
     return arr
 
